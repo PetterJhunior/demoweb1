@@ -1,0 +1,27 @@
+﻿@model List<Modelo.c3_dominio.entidad.Producto>
+@{
+    ViewBag.Title = "PRODUCTOS CON ARQUITECTURA";
+}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <td>Nombre</td>
+            <th>Descripcion</th>
+            <th>Detalle</th>
+            <th>Precio</th>
+        </tr>        
+    </thead>
+    <tbody>
+    @foreach (var producto in Model)
+    {
+        <tr>
+            <th>@producto.nombreProducto</th>
+            <th>@producto.descripcionProducto</th>
+            <th>@producto.detalleProducto</th>
+            <th>@producto.precioProducto</th>
+        </tr>
+    }
+    </tbody>
+</table>
+
